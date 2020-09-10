@@ -39,4 +39,16 @@ public class ShopDropTest {
         assertThat(rsl[1].getName(), is("Juice"));
         assertThat(rsl[2], is(nullValue()));
     }
+
+    @Test
+    public void whenDropMiddle2() {
+        Product[] products = new Product[3];
+        products[0] = new Product("Milk", 10);
+        products[1] = new Product("Bread", 4);
+        products[2] = new Product("Juice", 2);
+        Product[] rsl = ShopDrop.leftShift(products, 2);
+        assertThat(rsl[0].getName(), is("Milk"));
+        assertThat(rsl[1].getName(), is("Bread"));
+        assertThat(rsl[2], is(nullValue()));
+    }
 }
