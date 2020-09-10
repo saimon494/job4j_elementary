@@ -8,6 +8,7 @@ public class Library {
         Book book4 = new Book();
         Book[] books = new Book[] {book1, book2, book3, book4};
         book1.setTitle("Clean code");
+        book1.setNumberOfPage(100);
 
         for (int index = 0; index < books.length; index++) {
             Book b = books[index];
@@ -20,6 +21,13 @@ public class Library {
         for (int index = 0; index < books.length; index++) {
             Book b = books[index];
             System.out.println(b.getTitle() + " - " + b.getNumberOfPage());
+        }
+        System.out.println();
+        for (int index = 0; index < books.length; index++) {
+            Book b = books[index];
+            if (b.getTitle() != null && b.getTitle().equals("Clean code")) {
+                System.out.println(b.getTitle() + " - " + b.getNumberOfPage());
+            }
         }
     }
 }
