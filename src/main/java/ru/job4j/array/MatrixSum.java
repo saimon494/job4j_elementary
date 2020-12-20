@@ -1,5 +1,7 @@
 package ru.job4j.array;
 
+import java.util.Arrays;
+
 public class MatrixSum {
     public static int sum(int[][] array) {
         int rsl = 0;
@@ -9,5 +11,13 @@ public class MatrixSum {
             }
         }
         return rsl;
+    }
+
+    public static void main(String[] args) {
+        int[][] in = {
+                {1, 2},
+                {3, 4}
+        };
+        System.out.println(Arrays.toString(in[0]));
     }
 }
